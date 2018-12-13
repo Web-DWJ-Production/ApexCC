@@ -1,0 +1,37 @@
+/* Material Design */
+@lrg-screen: ~"(min-width:1201px)";
+@md-screen: ~"(max-width: 1200px) and (min-width:901px)";
+@sm-screen: ~"(max-width: 900px) and (min-width:601px)";
+@mobile-device: ~"(max-width: 600px)";
+
+/* Material Design */
+@lrg-sidenav: ~"(min-width:901px)";
+@mobile-sidenav: ~"(max-width: 900px)";
+
+/* Fonts */
+@font-size: 14px;
+
+/* Color Themes */
+@background: rgba(220,220,220,1);
+.background(@prop,@val){ @{prop}: rgba(220,220,220,@val) !important; }
+
+@color1: rgba(149,37,61,1);
+.color1(@prop,@val){ @{prop}: rgba(149,37,61,@val) !important; }
+
+@color2: rgba(32,1,34,1);
+.color2(@prop,@val){ @{prop}: rgba(32,1,34,@val) !important; }
+
+body, html { 
+    margin: 0px !important;
+    background: @background;
+    color: rgba(0,0,0,1);
+    height: 100%;
+    //font-family: 'Roboto', sans-serif;
+    //font-family: 'Slabo 27px', serif;
+    //font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.demo-txt {
+    height: 500px;
+}
