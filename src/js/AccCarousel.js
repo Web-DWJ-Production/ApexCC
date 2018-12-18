@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-scroll';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -15,6 +16,9 @@ class AccCarousel extends Component{
     super(props);
 
     this.state = {
+        scrollSpy: true,
+        scrollSmooth: true,
+        scrollDuration: 500,
         showThumbs: false,
         carouselData: [
             { img:carouselImg1, class:"acc-header", content:"ACC PROVIDES SOLUTIONS"},
@@ -40,7 +44,7 @@ class AccCarousel extends Component{
                 )}
             </Carousel>
 
-            <div className="scroll-page"><i class="fas fa-chevron-down"></i></div>
+            <Link activeClass="active" className="scroll-link aboutus" to="aboutus" spy={this.state.scrollSpy} smooth={this.state.scrollSmooth} duration={this.state.scrollDuration}><div className="scroll-page"><i className="fas fa-chevron-down"></i></div></Link>
          </div>
       );
    }

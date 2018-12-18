@@ -16,8 +16,30 @@
             .navbar-nav {
                 .nav-item {
                     .nav-link {
+                        cursor: pointer;
                         color: rgba(255,255,255,1);
                     }
+                }
+            }
+        }
+
+        @media @mobile-device {
+            .navbar-toggler {
+                .background(background,0.3); 
+                border-radius: 5px;              
+                .navbar-toggler-icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+
+            .navbar-collapse {                
+                .background(background, 0.95);
+                border-radius: 5px;
+                text-align: center;
+                .nav-item {
+                    .nav-link { color: rgba(0,0,0,1) !important; font-size: 1.3rem; }
                 }
             }
         }

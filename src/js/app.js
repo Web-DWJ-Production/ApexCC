@@ -13,7 +13,7 @@ class App extends Component{
             <Header />
             <AccCarousel />
             <SiteBody />
-            <div class="footer"></div>
+            <div className="footer"></div>
          </div>
       );
    }

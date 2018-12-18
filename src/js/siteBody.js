@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AliceCarousel from 'react-alice-carousel';
+import { Element } from 'react-scroll';
 import GoogleMap from 'google-map-react';
 import $ from 'jquery';
 
@@ -59,8 +60,9 @@ class SiteBody extends Component{
    }
 
    componentDidMount() {
-       this.setMarker();
+       //this.setMarker();   
    }
+
 
    setMarker() {
     var markerElement = $("div:has(> .acc-mapMarker)")[0];
@@ -83,20 +85,18 @@ class SiteBody extends Component{
 
       return(
          <div className="site-body">
-         <div className="section-container">
+            <Element name="aboutus" className="section-container">
                 <h1>About Us</h1>
                 <p className="lrg-txt">Since 1991, <b>Apex Communication Corporation (ACC)</b> has operated with the express
                 purpose of being a quality, innovative and profitable Program Management and Services
                 organization. We are an <b>SBA Small Disadvantaged Business (SDB) and SBA Certified
                 Small Business</b> and pride ourselves on making prudent and effective use of products,
                 training, personnel and strategic partnerships.</p>
+            </Element>
 
-            </div>
-
-            <div className="section-container">
+            <Element name="weare" className="section-container">
                 <h1>We Are</h1>
                 <div className="text-grid">
-
                     <div className="item">
                         <div className="item-icon"><i className="fas fa-user-tie"></i></div>
                         <div className="item-text">
@@ -134,9 +134,9 @@ class SiteBody extends Component{
                         </div>
                     </div>
                 </div>
-            </div>
+            </Element>
 
-            <div className="section-container logo-garden">
+            <Element name="clients" className="section-container logo-garden">
                 <h1>Our Client</h1>
                 <div className="client-list">
                     <span className="ctrl prev" onClick={() => this.Carousel._slidePrev()}><i className="fas fa-chevron-left"></i></span>
@@ -151,17 +151,17 @@ class SiteBody extends Component{
                         buttonsDisabled={true}
                         ref={ el => this.Carousel = el }/>
                 </div>
-            </div>
+            </Element>
 
-            <div className="section-container grey-back">
+            <Element name="capabilities" className="section-container grey-back">
                 <h1>Capabilities</h1>
                 <p className="md-txt">Apex Communications Corporation (ACC) has significant experience in successfully
 facilitating high level services for our clients, including but not limited to:</p>
 
                 <CapabilitiesList />
-            </div>
+            </Element>
 
-            <div className="section-container split-content design-back">
+            <div className="section-container split-section design-back">
                 <div className="split-content">
                     <h1>Certifications</h1>
 
@@ -180,7 +180,7 @@ facilitating high level services for our clients, including but not limited to:<
                 <div className="back-img"><img alt="certifications banner" src={bannerImg}/></div>
             </div>
 
-            <div className="section-container">
+            <Element name="contactus" className="section-container">
                 <h1>Contact Us</h1>
                 <div className="inner-split-content">
                     <div className="split map">
@@ -204,7 +204,7 @@ develop a successful partnership. Please contact us at:</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Element>
          </div>
       );
    }

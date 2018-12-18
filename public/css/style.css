@@ -10,8 +10,8 @@ html {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
-.demo-txt {
-  height: 500px;
+*:focus {
+  outline: none;
 }
 .header-body {
   position: absolute;
@@ -28,7 +28,28 @@ html {
   padding: 0px 30px;
 }
 .header-body .acc-navbar .navbar-right .navbar-nav .nav-item .nav-link {
+  cursor: pointer;
   color: #ffffff;
+}
+@media (max-width: 770px) {
+  .header-body .acc-navbar .navbar-toggler {
+    background: rgba(220, 220, 220, 0.3) !important;
+    border-radius: 5px;
+  }
+  .header-body .acc-navbar .navbar-toggler .navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-body .acc-navbar .navbar-collapse {
+    background: rgba(220, 220, 220, 0.95) !important;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .header-body .acc-navbar .navbar-collapse .nav-item .nav-link {
+    color: #000000 !important;
+    font-size: 1.3rem;
+  }
 }
 .navbar-logo {
   width: 50px;
@@ -51,7 +72,7 @@ html {
   content: '';
   position: absolute;
   z-index: 100;
-  bottom: 0;
+  bottom: -1px;
   background-color: #dcdcdc;
   width: 100%;
   height: 100px;
@@ -94,9 +115,23 @@ html {
   width: 45%;
   text-align: left;
 }
+@media (max-width: 770px) {
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container .acc-title {
+    font-size: 2.5rem;
+    width: 100%;
+    padding: 0px 5%;
+    left: 0;
+    text-align: center;
+  }
+}
 .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container .acc-title.acc-header {
   font-weight: bold;
   font-size: 4.5rem;
+}
+@media (max-width: 770px) {
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container .acc-title.acc-header {
+    font-size: 3rem;
+  }
 }
 .carousel-body .acc-carousel .carousel .control-dots {
   bottom: 130px;
@@ -116,6 +151,7 @@ html {
   transform: translateX(-50%);
   z-index: 1000;
   text-align: center;
+  cursor: pointer;
 }
 .site-body .section-container {
   padding: 20px 5%;
@@ -173,11 +209,16 @@ html {
 .site-body .section-container + .section-container {
   margin-top: 50px;
 }
-.site-body .section-container.split-content {
+.site-body .section-container.split-section {
   display: flex;
   flex-direction: row;
 }
-.site-body .section-container.split-content .split-content {
+@media (max-width: 770px) {
+  .site-body .section-container.split-section {
+    flex-direction: column;
+  }
+}
+.site-body .section-container.split-section .split-content {
   flex: 1;
 }
 .site-body .section-container h1 {
@@ -188,6 +229,11 @@ html {
   position: relative;
   display: inline-flex;
   flex-direction: row;
+}
+@media (max-width: 770px) {
+  .site-body .section-container .text-grid {
+    flex-direction: column;
+  }
 }
 .site-body .section-container .text-grid .item {
   position: relative;
@@ -221,13 +267,28 @@ html {
 .site-body .section-container .text-grid .item .item-text.bold div {
   font-weight: bold;
 }
+.site-body .section-container .text-grid .item .item-text p {
+  margin: 0px;
+}
 .site-body .section-container .lrg-txt {
   font-size: 1.3rem;
   line-height: 2.5rem;
 }
+@media (max-width: 770px) {
+  .site-body .section-container .lrg-txt {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+}
 .site-body .section-container .md-txt {
   font-size: 1.2rem;
   text-align: center;
+}
+@media (max-width: 770px) {
+  .site-body .section-container .md-txt {
+    font-size: 1rem;
+  }
 }
 .site-body .section-container .capabilities-body {
   display: flex;
@@ -257,6 +318,14 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 770px) {
+  .site-body .section-container .capabilities-body .cap-item .cap-content {
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: translate(0, 0);
+  }
 }
 .site-body .section-container .capabilities-body .cap-item .cap-content .content-title {
   color: #95253d;
@@ -332,6 +401,11 @@ html {
   flex-direction: row;
   position: relative;
   justify-content: space-between;
+}
+@media (max-width: 770px) {
+  .site-body .section-container .inner-split-content {
+    flex-direction: column;
+  }
 }
 .site-body .section-container .inner-split-content .split {
   flex: 1;
