@@ -30,6 +30,10 @@ html {
 .header-body .acc-navbar .navbar-right .navbar-nav .nav-item .nav-link {
   cursor: pointer;
   color: #ffffff;
+  transition: 0.5s all ease;
+}
+.header-body .acc-navbar .navbar-right .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
 }
 @media (max-width: 770px) {
   .header-body .acc-navbar .navbar-toggler {
@@ -127,6 +131,9 @@ html {
 .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container .acc-title.acc-header {
   font-weight: bold;
   font-size: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 @media (max-width: 770px) {
   .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container .acc-title.acc-header {
@@ -325,6 +332,7 @@ html {
     top: initial;
     left: initial;
     transform: translate(0, 0);
+    min-width: inherit;
   }
 }
 .site-body .section-container .capabilities-body .cap-item .cap-content .content-title {
@@ -382,9 +390,9 @@ html {
 }
 .site-body .section-container.logo-garden .client-list .alice-carousel div .alice-carousel__wrapper ul li img {
   height: 100%;
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(70%);
   /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  filter: grayscale(70%);
   transition: 0.5s all ease;
   cursor: pointer;
 }
@@ -419,7 +427,6 @@ html {
   width: 100%;
 }
 .site-body .section-container .inner-split-content .split.map .acc-mapMarker {
-  position: absolute;
   width: 20px;
   height: 20px;
 }
@@ -427,11 +434,19 @@ html {
   color: #95253d;
   font-size: 40px;
 }
+@media (max-width: 770px) {
+  .site-body .section-container .inner-split-content .split.map div {
+    height: 350px !important;
+  }
+}
 .site-body .section-container .inner-split-content .split .content-block {
   font-size: 1.2rem;
 }
 .site-body .section-container .inner-split-content .split .content-block + .content-block {
   margin-top: 20px;
+}
+.site-body .section-container .inner-split-content .split .content-block .bold {
+  font-weight: bold;
 }
 .footer {
   width: 100%;

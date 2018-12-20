@@ -134,7 +134,7 @@
                     left:50%;
                     transform: translate(-50%,-50%);
 
-                    @media @mobile-device { position: relative; top:initial; left: initial; transform: translate(0,0);}
+                    @media @mobile-device { position: relative; top:initial; left: initial; transform: translate(0,0); min-width: inherit;}
                     .content-title {
                         color: @color1;
                         font-weight: bold;
@@ -186,8 +186,8 @@
                                     text-align: center;
                                     img { 
                                         height: 100%;
-                                        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-                                        filter: grayscale(100%);
+                                        -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+                                        filter: grayscale(70%);
                                         transition: 0.5s all ease;
                                         cursor: pointer;
                                         &:hover {
@@ -218,15 +218,16 @@
                     min-height: 400px;
                     width: 100%;
                     .acc-mapMarker {
-                        position: absolute;
                         width: 20px;
                         height: 20px;
                         i { color: @color1; font-size: 40px;}
                     }
+                    div { @media @mobile-device {  height: 350px !important; }}
                 }
                 .content-block {
                     font-size: 1.2rem;
                     &+.content-block { margin-top: 20px; }
+                    .bold { font-weight: bold; }
                 }
             }
         }

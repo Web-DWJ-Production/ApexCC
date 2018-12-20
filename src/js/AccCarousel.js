@@ -5,11 +5,11 @@ import { Carousel } from 'react-responsive-carousel';
 
 /* Images */
 import carouselImg1 from '../assets/siteImgs/img0.jpeg';
-import carouselImg2 from '../assets/img2.jpg';
-import carouselImg3 from '../assets/stock3.jpeg';
-import carouselImg4 from '../assets/stock4.jpeg';
-import carouselImg5 from '../assets/stock8.jpeg';
-import carouselImg6 from '../assets/stock11.jpeg';
+import carouselImg2 from '../assets/siteImgs/img13.jpeg';
+import carouselImg3 from '../assets/siteImgs/img6.jpeg';
+import carouselImg4 from '../assets/siteImgs/img12.jpeg';
+import carouselImg5 from '../assets/siteImgs/img3.jpeg';
+import carouselImg6 from '../assets/siteImgs/img15.jpeg';
 
 class AccCarousel extends Component{
    constructor(props) {
@@ -18,7 +18,7 @@ class AccCarousel extends Component{
     this.state = {
         scrollSpy: true,
         scrollSmooth: true,
-        scrollDuration: 500,
+        scrollDuration: 5500,
         showThumbs: false,
         carouselData: [
             { img:carouselImg1, class:"acc-header", content:"ACC PROVIDES SOLUTIONS"},
@@ -34,7 +34,7 @@ class AccCarousel extends Component{
    render(){
       return(
          <div className="carousel-body">
-            <Carousel className="acc-carousel" showThumbs={this.state.showThumbs} showStatus={false} infiniteLoop autoPlay>
+            <Carousel className="acc-carousel" showThumbs={this.state.showThumbs} showStatus={false} interval={this.state.scrollDuration} infiniteLoop autoPlay>
                 {this.state.carouselData.map((item, i) => 
                     <div className="slide-container" key={i}>
                         <img alt={"carousel item " + i} src={item.img} />

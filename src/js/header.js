@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, Events } from 'react-scroll';
 
 /* Images */
-import accLogo from '../assets/logos/acc_logo_word.png';
+import accLogo from '../assets/logos/acc_logo_word_light.png';
 
 
 class Header extends Component{

@@ -7,11 +7,7 @@ import $ from 'jquery';
 import "react-alice-carousel/lib/alice-carousel.css";
 
 /* Images */
-import weImg1 from '../assets/img1.jpg';
-import weImg2 from '../assets/img2.jpg';
-import weImg3 from '../assets/img3.jpg';
-import weImg4 from '../assets/img4.jpg';
-import bannerImg from '../assets/stock5.jpeg';
+import bannerImg from '../assets/siteImgs/img7.jpeg';
 
 import DHS from '../assets/client-logos/DHS.png';
 import DOC from '../assets/client-logos/DOC.png';
@@ -55,22 +51,9 @@ class SiteBody extends Component{
         zoom: 15,
         office: {lat: 59.724465, lng: 30.080121}
     }
-
-    this.setMarker = this.setMarker.bind(this);
    }
 
-   componentDidMount() {
-       //this.setMarker();   
-   }
-
-
-   setMarker() {
-    var markerElement = $("div:has(> .acc-mapMarker)")[0];
-    if(markerElement){
-        markerElement.style.top = 0;
-        markerElement.style.left = 0;
-    }
-   }
+   componentDidMount() {  }
 
    clientItems() {
     return (
@@ -145,7 +128,9 @@ class SiteBody extends Component{
                     <AliceCarousel className="acc-client-carousel" items={items}
                         duration={400}
                         mouseDragEnabled={true}
-                        autoPlayDirection="rtl"
+                        autoPlay={true}
+                        autoPlayInterval={3000}
+                        autoPlayDirection="ltr"
                         responsive={this.state.responsive}
                         disableAutoPlayOnAction={true}
                         buttonsDisabled={true}
@@ -185,7 +170,7 @@ facilitating high level services for our clients, including but not limited to:<
                 <div className="inner-split-content">
                     <div className="split map">
                         <GoogleMap bootstrapURLKeys={{ key: this.state.key }} center={this.state.center} zoom={this.state.zoom}>
-                            <MapMarker lat={this.state.office.lat} lng={this.state.office.lng}></MapMarker>
+                            <MapMarker position={{ lat:this.state.office.lat, lng:this.state.office.lng}} name="Company Location"></MapMarker>
                         </GoogleMap>
                     </div>
 
@@ -194,13 +179,13 @@ facilitating high level services for our clients, including but not limited to:<
 develop a successful partnership. Please contact us at:</div>
 
                         <div className="content-block">
-                            <div>Fred.adams@apexcom1.com</div>
-                            <div>703.370.1230</div>
+                            <div className="bold"><a href="mailto:Fred.adams@apexcom1.com">Fred.adams@apexcom1.com</a></div>
+                            <div className="bold"><a href="tel:7033701230">703.370.1230</a></div>
                         </div>
 
                         <div className="content-block">
-                            <div>50 South Pickett Street, Ste 207</div>
-                            <div onClick={this.setMarker}>Alexandria, VA 22304</div>
+                            <div className="bold">50 South Pickett Street, Ste 207</div>
+                            <div className="bold">Alexandria, VA 22304</div>
                         </div>
                     </div>
                 </div>
