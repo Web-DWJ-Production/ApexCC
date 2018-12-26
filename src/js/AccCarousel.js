@@ -4,12 +4,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 /* Images */
-import carouselImg1 from '../assets/siteImgs/img0.jpeg';
-import carouselImg2 from '../assets/siteImgs/img13.jpeg';
-import carouselImg3 from '../assets/siteImgs/img6.jpeg';
-import carouselImg4 from '../assets/siteImgs/img12.jpeg';
-import carouselImg5 from '../assets/siteImgs/img3.jpeg';
-import carouselImg6 from '../assets/siteImgs/img15.jpeg';
+import carouselImg1 from '../assets/siteImgs-mini/img0.jpeg';
+import carouselImg2 from '../assets/siteImgs-mini/img13.jpeg';
+import carouselImg3 from '../assets/siteImgs-mini/img6.jpeg';
+import carouselImg4 from '../assets/siteImgs-mini/img12.jpeg';
+import carouselImg5 from '../assets/siteImgs-mini/img3.jpeg';
+import carouselImg6 from '../assets/siteImgs-mini/img15.jpeg';
 
 class AccCarousel extends Component{
    constructor(props) {

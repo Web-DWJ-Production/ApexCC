@@ -2,6 +2,7 @@
   "name": "apexcc_website",
   "version": "1.0.0",
   "description": "apexcc website",
+  "homepage": "",
   "main": "index.js",
   "scripts": {
     "build-css": "less-watch-compiler --run-once --main-file=style.less src/css/ public/css/",

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 /* Images */
-import capabilityImg1 from '../assets/siteImgs/img14.jpeg';
-import capabilityImg2 from '../assets/siteImgs/img9.jpeg';
-import capabilityImg3 from '../assets/siteImgs/img10.jpeg';
-import capabilityImg4 from '../assets/siteImgs/img2.jpeg';
-import capabilityImg5 from '../assets/siteImgs/img8.jpeg';
+import capabilityImg1 from '../assets/siteImgs-mini/img14.jpeg';
+import capabilityImg2 from '../assets/siteImgs-mini/img9.jpeg';
+import capabilityImg3 from '../assets/siteImgs-mini/img10.jpeg';
+import capabilityImg4 from '../assets/siteImgs-mini/img2.jpeg';
+import capabilityImg5 from '../assets/siteImgs-mini/img8.jpeg';
 
 class CapabilitiesList extends Component{
    constructor(props) {
