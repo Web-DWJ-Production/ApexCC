@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Events } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 /* Images */
 import accLogo from '../assets/logos/acc_logo_word_light.png';
@@ -24,11 +24,11 @@ class Header extends Component{
       return(
          <div className="header-body">
             <nav className="navbar navbar-expand-lg acc-navbar">
-                <a className="navbar-brand" href="#">
+                <div className="navbar-brand">
                     <img className="navbar-logo" src={accLogo} alt="Home Logo"/>
-                </a>
+                </div>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                    <span className="navbar-toggler-icon"><i className="fas fa-bars"></i></span>
                 </button>
                 <div className="collapse navbar-collapse navbar-right" id="navbarNav">
                     <ul className="navbar-nav">

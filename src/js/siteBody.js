@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import { Element } from 'react-scroll';
+import { Element, animateScroll as scroll } from 'react-scroll';
 import GoogleMap from 'google-map-react';
 import $ from 'jquery';
 
@@ -29,6 +29,9 @@ class SiteBody extends Component{
     super(props);
 
     this.state = {
+        scrollSpy: true,
+        scrollSmooth: true,
+        scrollDuration: 5500,
         clients:[
             {title:"Department of Transportation", logo:DOT},
             {title:"Department of Homeland Security", logo:DHS},
@@ -51,9 +54,30 @@ class SiteBody extends Component{
         zoom: 15,
         office: {lat: 59.724465, lng: 30.080121}
     }
+
    }
 
-   componentDidMount() {  }
+   componentDidMount() { 
+    var siteBody = document.getElementById("siteBody"); 
+    var pageScroll = document.getElementById("scrollBtn"); 
+    $(window).scroll(function() { 
+        if($(window).scrollTop() >= siteBody.offsetTop){
+            if(pageScroll.classList.contains("hidden")){
+                $('#scrollBtn').removeClass("hidden");
+            }
+        }
+        else {
+            if(!pageScroll.classList.contains("hidden")){
+                $('#scrollBtn').addClass("hidden");
+            }
+        }
+    });
+    this.scrollToTop = this.scrollToTop.bind(this);
+   }
+
+   scrollToTop(){
+    scroll.scrollToTop();
+   }
 
    clientItems() {
     return (
@@ -67,7 +91,8 @@ class SiteBody extends Component{
       const items = this.clientItems();
 
       return(
-         <div className="site-body">
+         <div className="site-body" id="siteBody">
+            <div onClick={this.scrollToTop} className="page-scroll hidden" id="scrollBtn"><div className="page-scroll-btn"><i className="fas fa-chevron-up"></i></div></div>
             <Element name="aboutus" className="section-container">
                 <h1>About Us</h1>
                 <p className="lrg-txt">Since 1991, <b>Apex Communication Corporation (ACC)</b> has operated with the express
