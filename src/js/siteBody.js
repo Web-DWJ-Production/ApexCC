@@ -15,7 +15,7 @@ import DON from '../assets/client-logos/DON.png';
 import DOT from '../assets/client-logos/DOT.png';
 import EPA from '../assets/client-logos/EPA.png';
 import FAA from '../assets/client-logos/FAA.png';
-import SSA from '../assets/client-logos/SSA.png';
+import SSA from '../assets/client-logos/SSA.svg';
 import USAIR from '../assets/client-logos/USAIR.png';
 import USPS from '../assets/client-logos/USPS.png';
 import VA from '../assets/client-logos/VA.svg';
@@ -95,7 +95,7 @@ class SiteBody extends Component{
             <div onClick={this.scrollToTop} className="page-scroll hidden" id="scrollBtn"><div className="page-scroll-btn"><i className="fas fa-chevron-up"></i></div></div>
             <Element name="aboutus" className="section-container">
                 <h1>About Us</h1>
-                <p className="lrg-txt">Since 1991, <b>Apex Communication Corporation (ACC)</b> has operated with the express
+                <p className="lrg-txt">Since 1991, <b>Apex Communications Corporation (ACC)</b> has operated with the express
                 purpose of being a quality, innovative and profitable Program Management and Services
                 organization. We are an <b>SBA Small Disadvantaged Business (SDB) and SBA Certified
                 Small Business</b> and pride ourselves on making prudent and effective use of products,
@@ -119,7 +119,7 @@ class SiteBody extends Component{
                     <div className="item">
                         <div className="item-icon"><i className="fas fa-sitemap"></i></div>
                         <div className="item-text bold">
-                            <p>Experts in</p>                             
+                            <p>Experts in:</p>                             
                             <div>Team Building and Business Partnerships</div>
                             <div>Staff Augmentation</div>
                             <div>IT Staffing Solutions</div> 
@@ -127,7 +127,7 @@ class SiteBody extends Component{
                             <div>Office Support Services</div>
                             <div>Recruitment/Staffing</div> 
                             <div>Document/Data Management</div> 
-                            <div>Mail management</div>
+                            <div>Mail Management</div>
                             <div>Warehouse Services</div> 
                             <div>and Customized Applications</div>                             
                             <p>that meet our client's requirements.</p>
@@ -138,14 +138,14 @@ class SiteBody extends Component{
                         <div className="item-icon"><i className="far fa-lightbulb"></i></div>
                         <div className="item-text">
                             <p>Innovative thinkers focused of cost effective solutions that increase business productivity and efficiency.</p>
-                            <p>Proud of our reputation for competence and customer satisfaction, and a uniquely qualified candidate for providing client/customer solutions.</p>
+                            <p>We are Proud of our reputation for competence and customer satisfaction, and a uniquely qualified candidate for providing client/customer solutions.</p>
                         </div>
                     </div>
                 </div>
             </Element>
 
             <Element name="clients" className="section-container logo-garden">
-                <h1>Our Client</h1>
+                <h1>Our Clients</h1>
                 <div className="client-list">
                     <span className="ctrl prev" onClick={() => this.Carousel._slidePrev()}><i className="fas fa-chevron-left"></i></span>
                     <span className="ctrl next" onClick={() => this.Carousel._slideNext()}><i className="fas fa-chevron-right"></i></span>

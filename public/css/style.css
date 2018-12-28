@@ -317,6 +317,9 @@ html {
 .site-body .section-container .text-grid .item .item-text p {
   margin: 0px;
 }
+.site-body .section-container .text-grid .item .item-text p + p {
+  margin-top: 20px;
+}
 .site-body .section-container .lrg-txt {
   font-size: 1.3rem;
   line-height: 2.5rem;
@@ -355,6 +358,11 @@ html {
   -webkit-filter: grayscale(50%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
+}
+@media (max-width: 770px) {
+  .site-body .section-container .capabilities-body .cap-item img {
+    width: 100%;
+  }
 }
 .site-body .section-container .capabilities-body .cap-item .cap-content {
   padding: 20px;

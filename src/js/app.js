@@ -31,7 +31,7 @@ class App extends Component{
                   <Link activeClass="active" className="footer-link contactus" to="contactus" spy={this.state.scrollSpy} smooth={this.state.scrollSmooth} duration={this.state.scrollDuration}>Contact Us</Link>
                </div>
                <div className="footer-container copyright">
-                  <div className="row-column">APEX COMMUNICATION CORPERATION © COPYRIGHT 2019</div>
+                  <div className="row-column">APEX COMMUNICATIONS CORPORATION © COPYRIGHT 2019</div>
                   <div className="row-column">SITE BY <a href="http://dwjproduction.com/" target="_blank" rel="noopener noreferrer">DWJ PRODUCTION WEB</a></div>
                </div>
             </div>

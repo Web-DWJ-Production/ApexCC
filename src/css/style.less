@@ -137,7 +137,10 @@
                     padding: 2px; 
                     font-size: 1rem;
                     &.bold { div { font-weight: bold;}}
-                    p{ margin: 0px;}
+                    p{ 
+                        margin: 0px; 
+                        &+p { margin-top: 20px; }
+                    }
                 }                
             }
         }
@@ -161,6 +164,7 @@
                     z-index: 0;
                     -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
                     filter: grayscale(50%);
+                    @media @mobile-device { width: 100%; }
                 }
                 .cap-content {
                     padding: 20px;
