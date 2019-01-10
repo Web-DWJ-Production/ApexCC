@@ -312,7 +312,7 @@ html {
   font-size: 1rem;
 }
 .site-body .section-container .text-grid .item .item-text.bold div {
-  font-weight: bold;
+  font-weight: 800;
 }
 .site-body .section-container .text-grid .item .item-text p {
   margin: 0px;

@@ -95,7 +95,7 @@ class SiteBody extends Component{
             <div onClick={this.scrollToTop} className="page-scroll hidden" id="scrollBtn"><div className="page-scroll-btn"><i className="fas fa-chevron-up"></i></div></div>
             <Element name="aboutus" className="section-container">
                 <h1>About Us</h1>
-                <p className="lrg-txt">Since 1991, <b>Apex Communications Corporation (ACC)</b> has operated with the express
+                <p className="lrg-txt">Based in the Washington DC Metro area since 1991, <b>Apex Communications Corporation (ACC)</b> has operated with the express
                 purpose of being a quality, innovative and profitable Program Management and Services
                 organization. We are an <b>SBA Small Disadvantaged Business (SDB) and SBA Certified
                 Small Business</b> and pride ourselves on making prudent and effective use of products,
@@ -138,7 +138,7 @@ class SiteBody extends Component{
                         <div className="item-icon"><i className="far fa-lightbulb"></i></div>
                         <div className="item-text">
                             <p>Innovative thinkers focused of cost effective solutions that increase business productivity and efficiency.</p>
-                            <p>We are Proud of our reputation for competence and customer satisfaction, and a uniquely qualified candidate for providing client/customer solutions.</p>
+                            <p>We are proud of our reputation for competence and customer satisfaction, and a uniquely qualified candidate for providing client/customer solutions.</p>
                         </div>
                     </div>
                 </div>
