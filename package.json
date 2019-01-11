@@ -8,6 +8,7 @@
     "build-css": "less-watch-compiler --run-once --main-file=style.less src/css/ public/css/",
     "watch-css": "npm run build-css && less-watch-compiler --main-file=style.less src/css/ public/css/",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "postinstall": "npm run build",
     "script-run": "react-scripts start",
     "script-dev": "concurrently \"npm run watch-css\" \"npm run script-run\" \"wait-on http://localhost:3001\""
