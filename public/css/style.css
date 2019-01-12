@@ -321,7 +321,7 @@ html {
   margin-top: 20px;
 }
 .site-body .section-container .lrg-txt {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2.5rem;
 }
 @media (max-width: 770px) {
@@ -332,7 +332,7 @@ html {
   }
 }
 .site-body .section-container .md-txt {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   text-align: center;
 }
 @media (max-width: 770px) {
