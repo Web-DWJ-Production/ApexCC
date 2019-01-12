@@ -20,6 +20,10 @@ import USAIR from '../assets/client-logos/USAIR.png';
 import USPS from '../assets/client-logos/USPS.png';
 import VA from '../assets/client-logos/VA.svg';
 
+import LEIDOS from '../assets/client-logos/LEIDOS.png';
+import NTX from '../assets/client-logos/NTX.jpg';
+import LINC from '../assets/client-logos/LINC.jpg';
+
 import CapabilitiesList from './capabilitiesList';
 
 const MapMarker = () => <div className="acc-mapMarker"><i className="fas fa-map-pin"></i></div>;
@@ -33,16 +37,19 @@ class SiteBody extends Component{
         scrollSmooth: true,
         scrollDuration: 5500,
         clients:[
-            {title:"Department of Transportation", logo:DOT},
-            {title:"Department of Homeland Security", logo:DHS},
-            {title:"Federal Aviation Administration", logo:FAA},
-            {title:"Social Security Administration", logo:SSA},
-            {title:"Department of the Navy", logo:DON},
-            {title:"Department of Commerce", logo:DOC},
-            {title:"Environmental Protection Agency", logo:EPA},
-            {title:"United States Postal Service", logo:USPS},
-            {title:"US Air Force", logo:USAIR},
-            {title:"Veteran Affairs", logo:VA}
+            {title:"Department of Transportation", logo:DOT, classname:""},
+            {title:"Department of Homeland Security", logo:DHS, classname:""},
+            {title:"Federal Aviation Administration", logo:FAA, classname:""},
+            {title:"Social Security Administration", logo:SSA, classname:""},
+            {title:"Department of the Navy", logo:DON, classname:""},
+            {title:"Department of Commerce", logo:DOC, classname:""},
+            {title:"Environmental Protection Agency", logo:EPA, classname:""},
+            {title:"United States Postal Service", logo:USPS, classname:""},
+            {title:"US Air Force", logo:USAIR, classname:""},
+            {title:"Veteran Affairs", logo:VA, classname:""},
+            {title:"Leidos", logo:LEIDOS, classname:"long"},
+            {title:"Novitex", logo:NTX, classname:"long"},
+            {title:"Lincoln Financial", logo:LINC, classname:"long"}
         ],
         responsive: {
             0: { items: 1 },
@@ -82,7 +89,7 @@ class SiteBody extends Component{
    clientItems() {
     return (
       this.state.clients.map((item, i) => (
-        <img alt={`logo-${i}`} key={`key-${i}`} src={item.logo} className="clientImg"/>
+        <img alt={`logo-${i}`} key={`key-${i}`} src={item.logo} className={'clientImg ' + item.classname}/>
       ))
     )
   };
@@ -97,9 +104,15 @@ class SiteBody extends Component{
                 <h1>About Us</h1>
                 <p className="lrg-txt">Based in the Washington DC Metro area since 1991, <b>Apex Communications Corporation (ACC)</b> has operated with the express
                 purpose of being a quality, innovative and profitable Program Management and Services
-                organization. We are an <b>SBA Small Disadvantaged Business (SDB) and SBA Certified
+                organization. We are a <b>SBA Small Disadvantaged Business (SDB) and SBA Certified
                 Small Business</b> and pride ourselves on making prudent and effective use of products,
                 training, personnel and strategic partnerships.</p>
+                <ul className="fa-ul lrg-txt">
+                    <li><span className="fa-li" ><i className="fas fa-caret-right"></i></span>Small and Large Business Partnering</li>
+                    <li><span className="fa-li" ><i className="fas fa-caret-right"></i></span>True value via innovation, quality, timing, and price</li>
+                    <li><span className="fa-li" ><i className="fas fa-caret-right"></i></span>ACC’s Government teaming focus effectively helps reduce client’s risk and cost</li>
+                    <li><span className="fa-li" ><i className="fas fa-caret-right"></i></span>ACC’s flexible partnership strategies and financial funding support resources provides a wide spectrum of opportunities</li>
+                </ul>
             </Element>
 
             <Element name="weare" className="section-container">
@@ -110,8 +123,7 @@ class SiteBody extends Component{
                         <div className="item-text">
                             <p>Experienced leaders with more than <b>27 years</b> managing and implementing
                                 transformative objectives across the various governmental agencies.</p>
-                            <p>We have an in-depth understanding of business process, staffing and operational re-
-                                engineering, financial management and financial operations, and leveraging state
+                            <p>We have an in-depth understanding of business process, staffing and operational re&#8209;engineering, financial management and financial operations, and leveraging state
                                 of the art technology to ensure success.</p>
                         </div>
                     </div>
@@ -130,15 +142,15 @@ class SiteBody extends Component{
                             <div>Mail Management</div>
                             <div>Warehouse Services</div> 
                             <div>and Customized Applications</div>                             
-                            <p>that meet our client's requirements.</p>
+                            <p>that meet or exceed our client's requirements.</p>
                         </div>
                     </div>
 
                     <div className="item">
                         <div className="item-icon"><i className="far fa-lightbulb"></i></div>
                         <div className="item-text">
-                            <p>Innovative thinkers focused of cost effective solutions that increase business productivity and efficiency.</p>
-                            <p>We are proud of our reputation for competence and customer satisfaction, and a uniquely qualified candidate for providing client/customer solutions.</p>
+                            <p>Innovative thinking focused on cost effective solutions that increase business productivity and efficiency.</p>
+                            <p>We are proud of our reputation for competence and customer satisfaction, and a uniquely qualified partner for providing client/customer solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -165,7 +177,7 @@ class SiteBody extends Component{
 
             <Element name="capabilities" className="section-container grey-back">
                 <h1>Capabilities</h1>
-                <p className="md-txt">Apex Communications Corporation (ACC) has significant experience in successfully
+                <p className="md-txt">Apex Communications Corporation <b>(ACC)</b> has significant experience in successfully
 facilitating high level services for our clients, including but not limited to:</p>
 
                 <CapabilitiesList />
@@ -200,17 +212,18 @@ facilitating high level services for our clients, including but not limited to:<
                     </div>
 
                     <div className="split content">
-                        <div className="content-block">We look forward to discussing how we can help fulfill your business’s needs, and
-develop a successful partnership. Please contact us at:</div>
+                        <div className="content-block">We look forward to discussing how we can help fulfill your business contracting and business development needs.  Partnerships for Success!</div>
 
                         <div className="content-block">
-                            <div className="bold"><a href="mailto:Fred.adams@apexcom1.com">Fred.adams@apexcom1.com</a></div>
-                            <div className="bold"><a href="tel:7033701230">703.370.1230</a></div>
+                            <div className="bold">Apex Communications Corporation (ACC)</div>
+                            <div className="bold">50 South Pickett Street, Suite #207</div>
+                            <div className="bold">Alexandria, VA 22304</div>
                         </div>
 
                         <div className="content-block">
-                            <div className="bold">50 South Pickett Street, Ste 207</div>
-                            <div className="bold">Alexandria, VA 22304</div>
+                            <div className=""><a href="tel:7033701230">703.370.1230</a></div>
+                            <div className=""><a href="mailto:Apex1@apexcom1.com">Apex1@apexcom1.com</a></div>
+                            <div className="">Fred Adams, President</div>
                         </div>
                     </div>
                 </div>

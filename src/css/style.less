@@ -226,8 +226,10 @@
                                 li {
                                     height: 100%;
                                     text-align: center;
+                                    padding: 5px;
                                     img { 
                                         height: 100%;
+                                        max-width: 100%;
                                         -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
                                         filter: grayscale(70%);
                                         transition: 0.5s all ease;
@@ -236,6 +238,8 @@
                                             -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
                                             filter: grayscale(0%);
                                         }
+
+                                        &.long { width: 80%; height: initial;}
                                     }
                                 }
                             }
@@ -285,12 +289,16 @@
     color: rgba(255,255,255,1);
     .footer-container {
         display: inline-flex;
+        &.copyright { font-size: .85rem;}
         .footer-link { 
             padding: 0px 5px;
             cursor: pointer;
             &:hover { text-decoration: underline; }
         }
-        .row-column { padding: 0px 2px;}
+        .row-column { 
+            padding: 0px 2px;
+            .h-link { text-decoration: none; color: rgba(210,210,210,1); }
+        }
     }
 
     @media @mobile-device { 

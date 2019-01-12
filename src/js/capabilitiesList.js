@@ -17,15 +17,24 @@ class CapabilitiesList extends Component{
                 "Task Order Management",
                 "Acquisition Management",
                 "Conference and Meeting Facilitation",
-                "Assessment and Evaluation Tools"]},
-            { title: "Staffing", img:capabilityImg2, list:["Facilities Management Services", "Administrative/Clerical Support"]},
+                "Assessment and Evaluation Tools", "Joint Ventures/Funding Resources", "Teaming Strategies"]},
+            { title: "Staffing", img:capabilityImg2, list:["Facilities Management Services", "Administrative/Clerical Support", "Staff Augmentation", "Training"]},
             { title: "IT Services", img:capabilityImg3, list:["Staffing",
                 "Database Administration",
                 "System/Software Administration",
-                "Network Engineering",
-                "Scanning and Imaging Services"]},
-            { title: "Operations", img:capabilityImg4, list:["Warehouse Management and Operations","Mail Distribution Center Operations", "Digital Document Center Operation (Print Shop)", "Inventory management/control"]},
-            { title: "Facilities Management", img:capabilityImg5, list:["Construction and Renovation"]}            
+                "Network/Systems Engineering",
+                "Scanning and Imaging Services",
+                "Project/Program Management"]},
+            { title: "Operations", img:capabilityImg4, list:["Inventory management/control", 
+            "Digital Document Center Operation (Scanning/Document Production)",            
+            "Mail Distribution Center Operations", 
+            "Warehouse Management and Operations"]},
+            { title: "Facilities Management", img:capabilityImg5, list:[
+                "Inventory control",
+                "Asset Management",
+                "Project Management",
+                "Interior/Exterior Renovation",
+                "Construction Management"]}            
         ]
     }
    }

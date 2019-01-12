@@ -18,7 +18,7 @@ class AccCarousel extends Component{
     this.state = {
         scrollSpy: true,
         scrollSmooth: true,
-        scrollDuration: 5500,
+        scrollDuration: 2000,
         showThumbs: false,
         carouselData: [
             { img:carouselImg1, class:"acc-header", content:"ACC PROVIDES SOLUTIONS"},
