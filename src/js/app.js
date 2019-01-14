@@ -32,7 +32,6 @@ class App extends Component{
                </div>
                <div className="footer-container copyright">
                   <div className="row-column">APEX COMMUNICATIONS CORPORATION © COPYRIGHT 2019</div>
-                  <div className="row-column">SITE BY <a href="http://dwjproduction.com/" class="h-link" target="_blank" rel="noopener noreferrer">DWJ PRODUCTION WEB</a></div>
                </div>
             </div>
          </div>
