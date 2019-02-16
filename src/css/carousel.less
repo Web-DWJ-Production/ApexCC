@@ -35,6 +35,7 @@
                 .slider {
                     height: 100%;
                     .slide {
+                        @media @mobile-device {overflow: hidden;}
                         .slide-container {
                             height: 100%;
                             position: relative;
@@ -44,6 +45,17 @@
                                 min-width: 100%;
                                 -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
                                 filter: grayscale(50%);
+
+                                @media @mobile-device { 
+                                    @media (orientation: portrait) {
+                                        &.img-0 { margin-left: -100%;}
+                                        &.img-1 { margin-left: -100%;}
+                                        &.img-2 { margin-left: -100%;}
+                                        &.img-3 { margin-left: -100%;}
+                                        &.img-4 { margin-left: -100%;}
+                                        &.img-5 { margin-left: -100%;}
+                                    }
+                                }
                             }
                             .acc-title {
                                 position: absolute;

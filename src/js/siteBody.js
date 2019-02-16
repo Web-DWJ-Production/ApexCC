@@ -102,7 +102,7 @@ class SiteBody extends Component{
             <div onClick={this.scrollToTop} className="page-scroll hidden" id="scrollBtn"><div className="page-scroll-btn"><i className="fas fa-chevron-up"></i></div></div>
             <Element name="aboutus" className="section-container">
                 <h1>About Us</h1>
-                <p className="lrg-txt">Based in the Washington DC Metro area since 1991, <b>Apex Communications Corporation (ACC)</b> has operated with the express
+                <p className="lrg-txt">Based in the Washington DC Metro area since 1991, Fred Adams has operated <b>Apex Communications Corporation (ACC)</b> with the express
                 purpose of being a quality, innovative and profitable Program Management and Services
                 organization. We are a <b>SBA Small Disadvantaged Business (SDB) and SBA Certified
                 Small Business</b> and pride ourselves on making prudent and effective use of products,

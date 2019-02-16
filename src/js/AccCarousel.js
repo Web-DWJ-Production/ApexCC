@@ -18,7 +18,7 @@ class AccCarousel extends Component{
     this.state = {
         scrollSpy: true,
         scrollSmooth: true,
-        scrollDuration: 2000,
+        scrollDuration: 7000,
         showThumbs: false,
         carouselData: [
             { img:carouselImg1, class:"acc-header", content:"ACC PROVIDES SOLUTIONS"},
@@ -34,10 +34,11 @@ class AccCarousel extends Component{
    render(){
       return(
          <div className="carousel-body">
-            <Carousel className="acc-carousel" showThumbs={this.state.showThumbs} showStatus={false} interval={this.state.scrollDuration} infiniteLoop autoPlay>
+            {/*<Carousel className="acc-carousel" showThumbs={this.state.showThumbs} showStatus={false} interval={this.state.scrollDuration} infiniteLoop autoPlay>*/}
+            <Carousel className="acc-carousel" showThumbs={this.state.showThumbs} showStatus={false} interval={this.state.scrollDuration} infiniteLoop>
                 {this.state.carouselData.map((item, i) => 
                     <div className="slide-container" key={i}>
-                        <img alt={"carousel item " + i} src={item.img} />
+                        <img className={"img-"+i} alt={"carousel item img-" + i} src={item.img} />
                         <div className="carousel-cover"></div>
                         <p className={'acc-title ' + item.class}>{item.content}</p>
                     </div>

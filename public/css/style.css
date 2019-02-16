@@ -97,6 +97,11 @@ html {
 .carousel-body .acc-carousel .carousel .slider-wrapper .slider {
   height: 100%;
 }
+@media (max-width: 770px) {
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide {
+    overflow: hidden;
+  }
+}
 .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container {
   height: 100%;
   position: relative;
@@ -108,6 +113,26 @@ html {
   -webkit-filter: grayscale(50%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
+}
+@media (max-width: 770px) and (orientation: portrait) {
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container img.img-0 {
+    margin-left: -100%;
+  }
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container img.img-1 {
+    margin-left: -100%;
+  }
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container img.img-2 {
+    margin-left: -100%;
+  }
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container img.img-3 {
+    margin-left: -100%;
+  }
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container img.img-4 {
+    margin-left: -100%;
+  }
+  .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container img.img-5 {
+    margin-left: -100%;
+  }
 }
 .carousel-body .acc-carousel .carousel .slider-wrapper .slider .slide .slide-container .acc-title {
   position: absolute;

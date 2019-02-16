@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "apexcc website",
   "main": "index.js",
+  "homepage" : "http://www.apexcom1.com",
   "scripts": {
     "start": "react-scripts start",
     "build-css": "less-watch-compiler --run-once --main-file=style.less src/css/ public/css/",
